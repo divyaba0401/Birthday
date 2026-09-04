@@ -1,0 +1,1058 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>For Papa ✨</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600&family=Parisienne&display=swap" rel="stylesheet">
+
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+
+body{
+  margin:0;
+  color:#3b3035;
+  background:linear-gradient(135deg,#fff8f4,#f8f1ff 48%,#fffaf0);
+  font-family:"DM Sans",sans-serif;
+}
+
+body:before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  opacity:.35;
+  background-image:radial-gradient(#fff 1px,transparent 1px);
+  background-size:24px 24px;
+}
+
+.hidden{display:none!important}
+
+h1,h2{
+  font-family:"Cormorant Garamond",serif;
+}
+
+.script{
+  font-family:"Parisienne",cursive;
+}
+
+/* INTRO */
+#intro{
+  min-height:100vh;
+  display:grid;
+  place-items:center;
+  text-align:center;
+  padding:28px;
+}
+
+.intro-card{
+  max-width:720px;
+  animation:rise 1s ease both;
+}
+
+.mini{
+  letter-spacing:5px;
+  text-transform:uppercase;
+  font-size:12px;
+  opacity:.65;
+}
+
+.intro-card h1{
+  font-size:clamp(60px,12vw,110px);
+  line-height:.82;
+  margin:18px 0 12px;
+}
+
+.intro-sub{
+  font-family:"Cormorant Garamond",serif;
+  font-size:27px;
+}
+
+.open-btn{
+  margin-top:30px;
+  border:0;
+  padding:17px 34px;
+  border-radius:999px;
+  background:#3b3035;
+  color:white;
+  font-size:15px;
+  cursor:pointer;
+  box-shadow:0 12px 35px #3b30352c;
+  transition:.25s;
+}
+
+.open-btn:hover{
+  transform:translateY(-3px) scale(1.02);
+}
+
+/* MAIN */
+main{
+  max-width:1100px;
+  margin:auto;
+  padding:70px 22px 0;
+}
+section{
+  margin-bottom:100px;
+}
+
+.hero{
+  text-align:center;
+  padding:100px 15px 50px;
+}
+
+.badge{
+  display:inline-block;
+  padding:8px 14px;
+  border-radius:999px;
+  background:#ffffff99;
+  border:1px solid #fff;
+  font-size:12px;
+}
+
+.hero h2{
+  font-size:clamp(50px,8vw,88px);
+  margin:18px 0 8px;
+}
+
+.hero p{
+  max-width:650px;
+  margin:auto;
+  line-height:1.8;
+}
+
+.section-title{
+  text-align:center;
+  font-size:48px;
+  margin-bottom:12px;
+}
+
+.section-note{
+  text-align:center;
+  max-width:620px;
+  margin:0 auto 30px;
+  opacity:.75;
+}
+
+/* MEMORIES */
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:20px;
+}
+
+.card{
+  background:#fff;
+  border-radius:24px;
+  padding:10px;
+  box-shadow:0 12px 35px #503c4414;
+}
+
+.card img,
+.card video{
+  width:100%;
+  height:270px;
+  object-fit:cover;
+  border-radius:18px;
+  display:block;
+}
+
+.caption{
+  padding:12px 7px 5px;
+  line-height:1.6;
+}
+
+.empty{
+  text-align:center;
+  opacity:.55;
+  padding:30px;
+  grid-column:1/-1;
+}
+
+/* DISCOVERY CARDS */
+.discovery{
+  display:grid;
+  gap:22px;
+  max-width:720px;
+  margin:40px auto 0;
+}
+
+.discovery-card{
+  background:#ffffffb8;
+  border:1px solid #ffffff;
+  border-radius:30px;
+  padding:28px 30px;
+  text-align:center;
+  box-shadow:0 15px 45px #503c4412;
+  cursor:pointer;
+  transition:.3s ease;
+}
+
+.discovery-card:hover{
+  transform:translateY(-6px) rotate(.3deg);
+  box-shadow:0 20px 55px #503c4420;
+}
+
+.discovery-icon{
+  font-size:38px;
+  margin-bottom:8px;
+}
+
+.discovery-card h3{
+  font-family:"Cormorant Garamond",serif;
+  font-size:34px;
+  margin:5px 0;
+}
+
+.discovery-card p{
+  margin:5px 0 0;
+  opacity:.7;
+  line-height:1.6;
+}
+
+.reveal{
+  display:none;
+  margin-top:22px;
+  padding:25px;
+  border-radius:22px;
+  background:#fff;
+  animation:reveal .6s ease both;
+}
+
+.reveal.open{
+  display:block;
+}
+
+.reveal p{
+  line-height:1.8;
+}
+
+.close-note{
+  margin-top:15px;
+  font-size:12px;
+  opacity:.5;
+}
+
+/* LETTER */
+.envelope{
+  max-width:650px;
+  margin:auto;
+  background:#fff;
+  border-radius:28px;
+  padding:38px;
+  box-shadow:0 18px 50px #503c4418;
+}
+
+.cover{
+  text-align:center;
+  padding:25px 10px;
+}
+
+.heart{
+  font-size:45px;
+}
+
+.letter h3{
+  font-family:"Parisienne";
+  font-size:43px;
+  margin:0 0 12px;
+}
+
+.letter p{
+  white-space:pre-wrap;
+  line-height:1.8;
+  font-family:"Cormorant Garamond",serif;
+  font-size:21px;
+}
+
+/* FINAL */
+.final{
+  text-align:center;
+  padding:60px 20px;
+  border-radius:35px;
+  background:#ffffff85;
+}
+
+.final h2{
+  font-size:60px;
+  margin:10px;
+}
+
+.emoji-row{
+  font-size:27px;
+  letter-spacing:8px;
+  margin:18px 0;
+}
+
+footer{
+  text-align:center;
+  opacity:.55;
+  font-size:12px;
+  margin:0;
+  padding:65px 0 15px;
+}
+
+.sparkle{
+  position:fixed;
+  pointer-events:none;
+  animation:floatAway 1.2s ease forwards;
+  z-index:20;
+}
+
+@keyframes rise{
+  from{
+    opacity:0;
+    transform:translateY(25px);
+  }
+  to{
+    opacity:1;
+    transform:none;
+  }
+}
+
+@keyframes reveal{
+  from{
+    opacity:0;
+    transform:translateY(-10px);
+  }
+  to{
+    opacity:1;
+    transform:none;
+  }
+}
+
+@keyframes floatAway{
+  from{
+    opacity:1;
+    transform:translateY(0) scale(1);
+  }
+  to{
+    opacity:0;
+    transform:translateY(-80px) scale(1.5);
+  }
+}
+
+@media(max-width:600px){
+  main{
+    padding-top:30px;
+  }
+
+  .hero{
+    padding-top:25px;
+  }
+
+  .section-title{
+    font-size:40px;
+  }
+
+  .discovery-card{
+    padding:24px 20px;
+  }
+}
+/* ===== FULL SCREEN PAGES ===== */
+
+.page {
+  min-height: auto;
+  width: 100%;
+  display: none;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 20px 40px;
+  box-sizing: border-box;
+}
+.page.active {
+  display: flex;
+  animation: pageFade 0.8s ease;
+}
+
+@keyframes pageFade {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* ===== BIRTHDAY PAGE ===== */
+
+#birthdayPage {
+  text-align:center;
+  margin-bottom:0;
+}
+
+#birthdayPage .hero {
+  max-width: 800px;
+  margin: auto;
+}
+
+
+/* ===== NEXT BUTTON ===== */
+
+.next-btn {
+  margin-top: 30px;
+  padding: 15px 28px;
+  border: none;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.8);
+  color: #6d4c5b;
+  font-family: "DM Sans", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: 0.3s ease;
+}
+
+.next-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+
+/* ===== THINGS PAGE ===== */
+
+#thingsPage {
+  align-items: flex-start;
+  padding-top: 0;
+}
+
+.things-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding-top: 60px;
+  text-align: center;
+}
+
+.things-container h2 {
+  margin-top: 15px;
+  font-size: clamp(40px, 7vw, 70px);
+}
+
+.things-intro {
+  max-width: 600px;
+  margin: 0 auto 40px;
+  line-height: 1.7;
+}
+
+
+/* ===== SURPRISE CARDS ===== */
+
+.surprise-card {
+  position: relative;
+  margin: 22px auto;
+  padding: 28px;
+  max-width: 650px;
+  border-radius: 25px;
+  background: rgba(255,255,255,0.72);
+  border: 1px solid rgba(255,255,255,0.8);
+  box-shadow: 0 15px 45px rgba(0,0,0,0.07);
+  cursor: pointer;
+  transition: 0.35s ease;
+  overflow: hidden;
+}
+
+.surprise-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.11);
+}
+
+.surprise-icon {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.surprise-card h3 {
+  margin: 5px 0 8px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 30px;
+}
+
+.surprise-card > p {
+  margin: 0;
+  opacity: 0.75;
+}
+
+
+/* ===== REVEALS ===== */
+
+.reveal {
+  display: none;
+  margin-top: 25px;
+  padding-top: 22px;
+  border-top: 1px solid rgba(0,0,0,0.08);
+  line-height: 1.8;
+  text-align: left;
+  animation: revealIn 0.5s ease;
+}
+
+.reveal.show {
+  display: block;
+}
+
+@keyframes revealIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* ===== FINAL MESSAGE ===== */
+
+.final-message {
+  margin: 55px auto 20px;
+  padding: 30px;
+  line-height: 1.8;
+  opacity: 0.8;
+}
+
+
+/* ===== MOBILE ===== */
+
+@media (max-width: 600px) {
+
+  .page {
+    padding: 30px 16px;
+  }
+
+  .things-container {
+    margin: 20px auto;
+  }
+
+  .surprise-card {
+    padding: 24px 20px;
+  }
+
+  .surprise-card h3 {
+    font-size: 27px;
+  }
+
+}
+
+.birthday-gif {
+  display: block;
+  width: min(100%, 450px);
+  max-height: 400px;
+  object-fit: contain;
+  margin: 0 auto 25px;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.10);
+}
+
+.birthday-video {
+  display: block;
+  width: min(100%, 500px);
+  max-height: 400px;
+  margin: 0 auto 25px;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.10);
+}
+
+.letter-content {
+  text-align: center;
+  line-height: 1.8;
+  font-size: 1.05rem;
+  margin-top: 20px;
+}
+
+.letter-content p {
+  margin-bottom: 18px;
+}
+
+.letter-content ul {
+  margin: 10px 0 20px 25px;
+  padding: 0;
+}
+
+.letter-content li {
+  margin-bottom: 8px;
+}
+
+.letter-content strong {
+  font-weight: 600;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- OPENING -->
+<div id="intro">
+  <div class="intro-card">
+
+    <div class="mini">a tiny digital gift</div>
+
+    <h1>
+      For <span class="script">Papa</span> ✨
+    </h1>
+
+    <div class="intro-sub">
+      I made something for you... 👀
+    </div>
+
+    <button class="open-btn" onclick="openGift()">
+      Open✨
+    </button>
+
+  </div>
+</div>
+
+
+<!-- WEBSITE -->
+<main id="site" class="hidden">
+
+  <!-- BIRTHDAY PAGE -->
+  <section id="birthdayPage" class="page active">
+
+    <div class="hero">
+
+      <h1>Happy Birthday, Papa! 🎂</h1>
+
+      <p class="hero-text">
+        I made this little corner of the internet just for you.
+        Because sometimes a normal birthday wish just isn't enough. ✨
+      </p>
+
+      <button class="next-btn" onclick="showThings()">
+        There's more... 👀
+      </button>
+    </div>
+
+  </section>
+
+
+  <!-- A FEW THINGS PAGE -->
+  <section id="thingsPage" class="page">
+
+    <div class="things-container">
+
+    
+      <h2>A Few Things For You ✨</h2>
+
+      <p class="things-intro">
+        Okay Papa... you've made it this far. 😃
+        So I guess you deserve to see these.
+      </p>
+
+
+      <!-- LETTER -->
+      <div class="surprise-card letter-card" onclick="toggleReveal('letterReveal')">
+  <div class="surprise-icon">💌</div>
+
+  <h3>A Little Letter</h3>
+
+  <p>Okay... this one is actually from my heart 🥺</p>
+
+  <div id="letterReveal" class="reveal">
+    
+    <div class="letter-content">
+
+      <p>👀 <strong>Where should I start?</strong></p>
+
+      <p>
+        🤔 From you being very handsome, or caring, or responsible, or supportive...
+        ohhhh, or maybe the fact that you wake up and choose me every day. 🥺
+      </p>
+
+      <p>
+        Your eyes hold a different level of depth which cannot be described...
+        lost somewhere, maybe longing for something, kind of sad and hurt,
+        but always stubborn to not let anyone suffer the same.
+      </p>
+
+      <p>
+        Calling yourself bad after everything you do is kind of cruel. 🙄
+        Just someone's opinion doesn't define you. You are what you see yourself as.
+        You can be what you want to be — just believe in yourself, which you
+        apparently don't, but it's okay. 🙂‍↕️
+      </p>
+
+      <p>
+        I'll believe in you till you start believing in yourself, and forever. ✨
+      </p>
+
+      <p>
+        Start loving yourself the way you love me.
+      </p>
+
+      <p>
+        <strong>(You do, right? 🥺)</strong>
+      </p>
+
+      <p>
+        Ohhh yes, I was about to finish it, but I remember once you asked me
+        to say 5 things to prove you are good, so let me list them:
+      </p>
+
+      <p>Selfless 🥺</p>
+<p>Understanding</p>
+<p>Helping nature 😃</p>
+<p>Very much patient</p>
+<p>Respect people and their opinions</p>
+
+      <p>
+        I can go on, but let's just admit that it'll never be enough. 🙂‍↔️
+      </p>
+
+      <p>
+        I really want you to agree with it just for once. 👀
+      </p>
+
+      <p>
+        <strong>Happy Birthday, Mr. Vaibhav Sharma!! 🎂✨</strong>
+      </p>
+
+      <p>
+        You deserve everything you have and much more. 🥺✨
+      </p>
+
+    </div>
+
+  </div>
+</div>
+
+      <!-- SOMETHING ELSE -->
+      <div class="surprise-card" onclick="toggleReveal('elseReveal')">
+  <div class="surprise-icon">👀</div>
+
+  <h3>There's Something Else...</h3>
+
+  <p>You really thought that was everything? 😯</p>
+
+  <div id="elseReveal" class="reveal">
+    <p>Okay... here's something you might like. 🥺✨</p>
+
+    <div class="photo-grid" style="max-width: 600px; margin: 20px auto;">
+  <div class="photo-grid" style="
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 10px;
+  justify-content: center;
+  margin: 20px auto;
+  max-width: 100%;
+">
+  <div class="memory-photo" style="flex: 1;">
+    <img src="/memories/1.jpeg" alt="A special memory" style="width: 100%; height: 140px; object-fit: cover;">
+  </div>
+
+  <div class="memory-photo" style="flex: 1;">
+    <img src="/memories/2.jpeg" alt="A special memory" style="width: 100%; height: 140px; object-fit: cover;">
+  </div>
+
+  <div class="memory-photo" style="flex: 1;">
+    <img src="/memories/3.png" alt="A special memory" style="width: 100%; height: 140px; object-fit: cover; object-position: 50% 5%;">
+  </div>
+
+  <div class="memory-photo" style="flex: 1;">
+    <img src="/memories/4.jpeg" alt="A special memory" style="width: 100%; height: 140px; object-fit: cover; object-position: 50% 15%;">
+  </div>
+</div>
+</div>
+
+    <p class="photo-ending">
+      Some memories deserve their own little corner. 🥺✨
+    </p>
+  </div>
+</div>
+
+
+      <!-- DON'T PEEK -->
+      <div class="surprise-card" style="text-align: center;" onclick="toggleReveal('peekReveal')">
+        <div class="surprise-icon">🙊</div>
+
+        <h3>Don't Peek Yet</h3>
+
+        <p>I said don't look... 🙄</p>
+
+        <div id="peekReveal" class="reveal">
+          <p>
+            Okay fine, you looked. 🤦🏻‍♀️
+          </p>
+
+          <p>
+            I knew you wouldn't listen anyway. 😃
+          </p>
+	<p>I love you ❤️. Take Care of yourself✨</p>
+        </div>
+      </div>
+
+
+      <!-- ONE MORE THING -->
+<div class="surprise-card" onclick="toggleReveal('oneMoreReveal')">
+  <div class="surprise-icon">✨</div>
+
+  <h3>One More Thing</h3>
+
+  <p>Just one tiny thing before you go... 👀</p>
+
+  <div id="oneMoreReveal" class="reveal">
+
+    <div class="birthday-pass">
+
+      <div class="pass-title">
+        🎟️ YOUR OFFICIAL BIRTHDAY PASS
+      </div>
+
+      <p><strong>Valid for:</strong> One Extremely Special Birthday 🎂</p>
+
+      <p><strong>Issued by:</strong> Me 👉🏻👈🏻</p>
+
+      <p><strong>Expiry:</strong> Never. 🙂‍↕️</p>
+
+      <button
+        class="claim-btn"
+        onclick="event.stopPropagation(); claimPass()">
+        🎫 CLAIM YOUR PASS
+      </button>
+
+      <div id="claimedPass" class="claimed-pass" style="display: none;">
+
+        <div class="claim-title">
+          🎉 PASS ACTIVATED! 🎉
+        </div>
+
+        <p>
+          Congratulations, Papa. 😃
+        </p>
+
+        <p>
+          Your birthday pass has officially been approved.
+          No take-backs. 🙄
+        </p>
+
+        <p>
+          You are now entitled to unlimited support,
+          occasional nonsense, and one person who will
+          keep believing in you. 🥺✨
+        </p>
+
+        <div class="pass-status">
+          ✨ STATUS: VALID FOREVER ✨
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+      <!-- FINAL SURPRISE -->
+      <div class="surprise-card final-card" onclick="toggleReveal('finalReveal')">
+  <div class="surprise-icon">🎁</div>
+
+  <h3>The Last Little Surprise</h3>
+
+  <p>Alright Papa... this is the final one. Maybe. 👀</p>
+
+ <div id="finalReveal" class="reveal" style="text-align: center;">
+
+    <img
+      src="/birthday.gif"
+      alt="A little birthday surprise"
+      class="birthday-gif"
+    >
+
+    <p>
+      Happy Birthday once again, Papa. 🎂✨
+    </p>
+
+    <p>
+      Thank you for all the little moments that somehow become
+      the memories we keep forever.
+    </p>
+
+    <p>
+      And yes... that's all. 🙂
+    </p>
+
+  </div>
+</div>
+      <div class="final-message">
+        <p>Made with way too much love and probably too many emojis. 🙉✨</p>
+        <p>Happy Birthday, Papa! 🥺🎂</p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <footer>
+    made especially for Papa · with love ✨
+  </footer>
+
+</main>
+
+
+<script>
+
+function openGift() {
+  document.getElementById("intro").classList.add("hidden");
+  document.getElementById("site").classList.remove("hidden");
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+}
+
+
+function showThings() {
+  document.getElementById("birthdayPage").classList.remove("active");
+
+  setTimeout(() => {
+    document.getElementById("birthdayPage").style.display = "none";
+
+    const thingsPage = document.getElementById("thingsPage");
+
+    thingsPage.style.display = "flex";
+
+    setTimeout(() => {
+      thingsPage.classList.add("active");
+    }, 20);
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+
+  }, 300);
+}
+
+function toggleReveal(id,card){
+
+  const box=document.getElementById(id);
+
+  box.classList.toggle("open");
+
+  createSparkles(card);
+
+}
+
+
+function createSparkles(element){
+
+  const symbols=["✨","✦","♡","🥺","👀"];
+
+  const rect=element.getBoundingClientRect();
+
+  for(let i=0;i<7;i++){
+
+    const sparkle=document.createElement("div");
+
+    sparkle.className="sparkle";
+
+    sparkle.textContent=
+      symbols[Math.floor(Math.random()*symbols.length)];
+
+    sparkle.style.left=
+      (rect.left + Math.random()*rect.width) + "px";
+
+    sparkle.style.top=
+      (rect.top + window.scrollY + 20) + "px";
+
+    sparkle.style.fontSize=
+      (12 + Math.random()*14) + "px";
+
+    document.body.appendChild(sparkle);
+
+    setTimeout(()=>{
+      sparkle.remove();
+    },1200);
+
+  }
+
+}
+
+
+async function loadMemories(){
+
+  const g=document.getElementById("gallery");
+
+  try{
+
+    const r=await fetch("/api/memories");
+
+    const data=await r.json();
+
+    if(!data.length){
+
+      g.innerHTML=
+        '<div class="empty">Your memories will appear here. 🥺✨</div>';
+
+      return;
+
+    }
+
+    g.innerHTML=data.map(m=>`
+
+      <article class="card">
+
+        ${
+          m.type==="video"
+          ?
+          `<video src="${m.file}" controls playsinline></video>`
+          :
+          `<img src="${m.file}" alt="Memory">`
+        }
+
+        <div class="caption">
+          ${escapeHtml(m.caption||"")}
+        </div>
+
+      </article>
+
+    `).join("");
+
+  }
+
+  catch(e){
+
+    g.innerHTML=
+      '<div class="empty">Could not load memories right now. 😕</div>';
+
+  }
+
+}
+
+
+function escapeHtml(s){
+
+  return s.replace(
+    /[&<>"']/g,
+    c=>({
+      "&":"&amp;",
+      "<":"&lt;",
+      ">":"&gt;",
+      '"':"&quot;",
+      "'":"&#039;"
+    }[c])
+  );
+
+}
+
+function claimPass() {
+  const pass = document.getElementById("claimedPass");
+
+  pass.style.display = "block";
+
+  const button = document.querySelector(".claim-btn");
+  button.textContent = "🎉 PASS CLAIMED!";
+  button.disabled = true;
+}
+</script>
+
+</body>
+</html>
